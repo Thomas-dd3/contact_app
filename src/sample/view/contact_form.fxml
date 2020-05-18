@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane alignment="center" hgap="10" minWidth="500.0" vgap="10" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.ContactController">
+    <children>
+        <TitledPane animated="false" minWidth="450.0" text="Données">
+            <content>
+                <VBox prefHeight="200.0" prefWidth="100.0">
+                    <children>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                            <children>
+                                <Label text="Prénom: " />
+                                <TextField fx:id="prenomTf" />
+                                <Label text="Nom: ">
+                                    <HBox.margin>
+                                        <Insets left="20.0" />
+                                    </HBox.margin></Label>
+                                <TextField fx:id="nomTf" />
+                            </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                            <children>
+                                <Label text="Ville: " />
+                                <TextField fx:id="villeTf" />
+                            </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                            <children>
+                                <Label text="Pays: " />
+                                <ComboBox fx:id="paysCb" prefWidth="150.0" />
+                            </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                            <children>
+                                <Label text="Sexe: " />
+                                <RadioButton fx:id="femmeRbtn" mnemonicParsing="false" text="F">
+                                    <padding>
+                                        <Insets left="10.0" />
+                                    </padding>
+                                    <toggleGroup>
+                                        <ToggleGroup fx:id="sexeGroup" />
+                                    </toggleGroup>
+                                </RadioButton>
+                                <RadioButton fx:id="hommeRbtn" mnemonicParsing="false" text="H" toggleGroup="$sexeGroup">
+                                    <padding>
+                                        <Insets left="10.0" />
+                                    </padding>
+                                </RadioButton>
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+            </content>
+            <GridPane.margin>
+                <Insets top="15.0" />
+            </GridPane.margin>
+        </TitledPane>
+        <Button fx:id="validerBtn" mnemonicParsing="false" text="Valider" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+    </children>
+    <rowConstraints>
+        <RowConstraints />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" />
+    </rowConstraints>
+    <columnConstraints>
+        <ColumnConstraints />
+    </columnConstraints>
+</GridPane>
